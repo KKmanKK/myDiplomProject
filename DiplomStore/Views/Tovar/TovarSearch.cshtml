@@ -1,0 +1,86 @@
+﻿@model TovarSearchViewModel
+@{Layout="_Layout";}
+ 
+    
+<div class="navn  sticky-top ">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-lg "style="background-color: #1968AA">
+      <div class="container ">
+        <a asp-action="Index" asp-controller="Home" class="navbar-brand d-none d-lg-flex" >
+          <img src="/img/logo/logo-1.jpg" class="" alt="" />
+          Logo
+        </a>
+        <form class="d-flex w-75 " asp-action="TovarSearch" asp-controller="Tovar"  method="get">          
+          <input class="form-control me-2" name="searhString" type="search" placeholder="Поиск" aria-label="Search">          
+        </form>
+        <div class="container-fluid  w-25">        
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+         
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 w-100">
+              <li class="nav-item text-center rounded-1 w-100 bg-light " >
+                  @await Component.InvokeAsync("CartSummary")
+              </li>
+              <li class="rounded-1 bg-light w-100 d-lg-none d-xl-none d-xxl-none nav-item ">
+                <a class="nav-link" asp-action="TitleIndex" asp-controller="Home">Список тайтолов</a>
+              </li> 
+               <li class="rounded-1 bg-light w-100 d-lg-none d-xl-none d-xxl-none nav-item ">
+                <a class="nav-link" asp-action="CategoryIndex" asp-controller="Home">Список категорий</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="#">Профиль</a>
+              </li>           
+            </ul>            
+          </div>
+      </div>                                        
+    </nav>
+</div>
+
+<div class="main mt-3">
+        <div class="container">
+          <div class="main__Title mb-4">
+            @Model.searchString / @Model.Tovars.Count() товаров
+          </div>
+          <!-- /.main__Title -->                       
+            
+            <div class="row">
+                @if(Model.Tovars == null || Model.Tovars.Count() <= 0)
+                {
+                    <p>Упс, ничего не найдено</p>
+                }
+                else
+                {
+                   @foreach(var c in Model.Tovars)
+                {
+                     <div class="col-lg-3 col-md-5 col-sm-5 col-5 mb-3">
+                 <div class="tovars__tit shadow-lg rounded-3 border border-1 text-center">
+                  <a asp-action="TovarIndex" asp-route-TovarId="@c.TovarsId" class="tovars__links link-dark">
+                    <img src="/src/img/img-Fig2.jpg" alt="" class="tovars__img rounded">
+                    <div class="tovars__span">@c.name</div>
+                  </a>                
+                    <!-- /.tovars__span -->
+                    <div class="tovars__info d-flex p-2 justify-content-between mt-3">
+                      <div class="tovars__price">@c.price.ToString("c")</div>
+                        <!-- /.towars__price -->
+                      <a asp-action="TovarIndex" asp-route-TovarId="@c.TovarsId"  class="tovars__links border border-1 rounded-3">
+                        <div class="tovars__cart"> content</div>                  
+                      </a>                               
+                     </div>              
+                    </div>                      
+                    </div>
+                } 
+                }
+                
+               
+              
+            </div>
+          </div>
+        </div>
+      
+      <style>
+
+          .contain { border:2px solid #ccc;  height: 100px; overflow-y: scroll;
+      </style>
+
+      

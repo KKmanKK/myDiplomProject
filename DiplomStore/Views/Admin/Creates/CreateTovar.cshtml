@@ -1,0 +1,71 @@
+﻿@model TovarViewModel
+@{
+    Layout = "_Layout";
+}
+<div asp-validation-summary="All"></div>
+<form method="post" asp-action="CreateTovar"class="m-2 t-2">
+  
+  <div class="mb-3">
+    <label asp-for="name" class="form-label"></label>
+    <input asp-for="name" class="form-control">    
+  </div> 
+  
+   <div class="mb-3">
+    <label asp-for="price" class="form-label"></label>
+    <input asp-for="price" class="form-control"  >    
+  </div> 
+
+   <div class="mb-3">
+    <label asp-for="titles" class="form-label"></label>
+    <select class="form-control" asp-for="nameTitle"  asp-items="ViewBag.Titles">
+        <option disabled selected value="">Выберите Тайтл</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label asp-for="category" class="form-label"></label>
+    <select class="form-control" asp-for="nameCategory" asp-items="ViewBag.Categories">
+        <option disabled selected value="">Выберите Тайтл</option>
+    </select>
+  </div>
+
+  
+   <div class="mb-3">
+    <label asp-for="hight" class="form-label"></label>
+    <input asp-for="hight" class="form-control">    
+  </div>
+
+   <div class="mb-3">
+    <label asp-for="width" class="form-label"></label>
+    <input asp-for="width" class="form-control">    
+  </div> 
+
+   <div class="mb-3">
+    <label asp-for="count" class="form-label"></label>
+    <input asp-for="count" class="form-control">    
+  </div> 
+  
+   <div class="mb-3">
+    <label asp-for="imgPath" class="form-label"></label>
+    <input asp-for="imgPath" class="form-control">    
+  </div> 
+
+   <div class="mb-3">
+    <label asp-for="materials" class="form-label"></label>
+    <input asp-for="materials" class="form-control">    
+  </div> 
+
+   <div class="mb-3">
+    <label asp-for="filler" class="form-label"></label>
+    <input asp-for="filler" class="form-control">    
+  </div> 
+  
+    <div class="mb-3 form-check">
+    <input  asp-for="isValids" class="form-check-input">
+    <label class="form-check-label" asp-for="isValids">В наличие?</label>
+    </div>
+
+  <button type="submit" class="btn btn-primary">Создать</button>
+  <a class="btn btn-secondary" asp-action="IndexTovars">Назад</a>
+
+</form>

@@ -1,0 +1,26 @@
+﻿@model CategoryViewModel
+@{
+    Layout = "_Layout";
+}
+<div asp-validation-summary="All"></div>
+<form method="post" asp-action="CreateCategory"class="m-2 t-2">
+  
+  <div class="mb-3">
+    <label asp-for="name" class="form-label"></label>
+    <input asp-for="name" class="form-control">    
+  </div> 
+   
+  <div class="mb-3">
+    <label asp-for="imgPath" class="form-label"></label>
+    <input asp-for="imgPath" class="form-control">    
+  </div> 
+
+  <div class="mb-3 form-check">
+    <input  asp-for="IsPopular" class="form-check-input">
+    <label class="form-check-label" asp-for="IsPopular">Популярный</label>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Создать</button>
+  <a class="btn btn-secondary" asp-action="IndexCategories">Назад</a>
+
+</form>

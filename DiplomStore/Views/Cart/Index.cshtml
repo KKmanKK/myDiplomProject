@@ -1,0 +1,102 @@
+﻿@model CartIndexViewModel
+@{Layout="_Layout";}
+
+<div class="navn  sticky-top ">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-lg "style="background-color: #1968AA">
+      <div class="container ">
+        <a asp-action="Index" asp-controller="Home" class="navbar-brand d-none d-lg-flex" >
+          <img src="/img/logo/logo-1.jpg" class="" alt="" />
+          Logo
+        </a>
+        <form class="d-flex w-75 " asp-action="TovarSearch" asp-controller="Tovar"  method="get">          
+          <input class="form-control me-2" name="searhString" type="search" placeholder="Поиск" aria-label="Search">          
+        </form>
+        <div class="container-fluid  w-25">        
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+         
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 w-100">
+              <li class="nav-item text-center rounded-1 w-100 bg-light " >
+                  @await Component.InvokeAsync("CartSummary")
+              </li>
+              <li class="rounded-1 bg-light w-100 d-lg-none d-xl-none d-xxl-none nav-item ">
+                <a class="nav-link" asp-action="TitleIndex" asp-controller="Home">Список тайтолов</a>
+              </li> 
+               <li class="rounded-1 bg-light w-100 d-lg-none d-xl-none d-xxl-none nav-item ">
+                <a class="nav-link" asp-action="CategoryIndex" asp-controller="Home">Список категорий</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="#">Профиль</a>
+              </li>           
+            </ul>            
+          </div>
+      </div>                                        
+    </nav>
+</div>
+
+  <div class="mainCart mt-4">
+          <div class="container">
+            <h4 class="mainCart__title ">
+                Корзина / @Model.Cart.Lines.Sum(s=>s.Quantity) товар
+            </h4>
+          <!-- /.mainCart__title -->
+              <div class="mainCart__content border p-2 bg-light">
+            @foreach(var c in Model.Cart.Lines)
+            {
+               <div class="mainCart__product row m-1 ">
+                      <div class="col-md-3">
+                          <img class="mainCart__img  rounded shadow" src="img/img-fig2.jpg" alt="">
+                      </div>
+                      <div class="col-md-3">
+                          <span class="fs-5">@c.tovar.name</span>
+                      </div>
+                      <div class="col-md-4  ">
+                          <div class=" d-flex justify-content-center">
+                            <form asp-action="RemoveItemFromCart" method="post">
+                                <input type="hidden" name="TovarsId" value="@c.tovar.TovarsId">
+                                <input type="hidden" name="returnUrl" value="@Model.ReturnUrl">
+                                <button class=" h-100 btn btn-light  border">-</button>
+                            </form>   
+                            
+                            <button class=" btn btn-light w-25 border">@c.Quantity</button>
+                            <form asp-action="AddToCart" method="post">
+                                <input type="hidden" name="TovarsId" value="@c.tovar.TovarsId">
+                                <input type="hidden" name="returnUrl" value="@Model.ReturnUrl">
+                                <button type="submit" class=" h-100 btn btn-light border">+</button>
+                              </form>
+                          </div>
+                            
+                            <form asp-action="RemoveFromCart" method="post">
+                                <input type="hidden" name="TovarsId" value="@c.tovar.TovarsId">
+                                <input type="hidden" name="returnUrl" value="@Model.ReturnUrl">
+                                <button class=" btn btn-light w-100 mt-2 d-grid border" type="submit">Удалить товар</button>
+                            </form>
+                            
+                      </div>
+                      <div class="col-md-2 text-end ">
+                          <span class="mainCart__Price">@Model.Cart.Lines.Where(s=>s.tovar.TovarsId==c.tovar.TovarsId).Sum(s=>s.tovar.price * c.Quantity).ToString("c")</span>
+                      </div>
+                  </div>
+                  <!-- /.mainCart__product --> 
+            }
+            
+              </div>
+              <!-- /.content -->
+             
+          </div>
+          <!-- /.container -->
+      </div>
+      <!-- /.mainCart -->
+
+      <div class="btnCart mt-3">
+          <div class="container">
+              <div class="block row h-25 justify-content-end">
+                    <span class="col-2 " >Итог: @Model.Cart.ComputeTotalVaule().ToString("c")</span>
+                    <a asp-action="" asp-controller="" class="col-lg-2 btn btn-primary" >Оформить заказ</a>
+              </div>
+          </div>
+          <!-- /.container -->
+      </div>
+      <!-- /.btnCart -->

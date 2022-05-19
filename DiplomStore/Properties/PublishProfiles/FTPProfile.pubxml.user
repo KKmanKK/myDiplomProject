@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Этот файл используется процессом публикации или упаковки вашего веб-проекта. Можно настроить поведение этого процесса,
+изменив этот файл MSBuild. Подробности см. на странице https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAUgZ6UslZk0ys5PNUP1VjkgAAAAACAAAAAAAQZgAAAAEAACAAAADGmF9+fSTyewB3+UWj0xZfnJfK9QPCGMdrnCDCWpjPEAAAAAAOgAAAAAIAACAAAAABP0ZdrS7hFsJ7cokiDISP+Tgw1YSF5ozF/+BMaREtwyAAAAC3Sb/i2dCUBS2WHxn+rCQEeEAFfOUvl+eFb9ZSMkN9mkAAAAC30lvw5jW6VQZaXPIZ3J7zBe3fssgvwu3ki5aujRU28SpFN8YtixOPO319OxQpfdr9574Xex0Y1BlLF7d9E0ru</EncryptedPassword>
+    <_PublishTargetUrl>ftp://155.254.244.39/www.testStore.somee.com</_PublishTargetUrl>
+    <History>True|2022-05-14T07:52:59.5002783Z;True|2022-05-14T13:59:40.6445674+07:00;True|2022-05-13T16:18:46.2422180+07:00;True|2022-05-13T15:51:24.7335321+07:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>05/02/2022 09:50:43</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>05/14/2022 14:46:11</publishTime>
+    </File>
+    <File Include="AutoMapper.dll">
+      <publishTime>02/04/2022 22:28:52</publishTime>
+    </File>
+    <File Include="AutoMapper.Extensions.Microsoft.DependencyInjection.dll">
+      <publishTime>01/05/2022 22:57:34</publishTime>
+    </File>
+    <File Include="DiplomStore.BLL.dll">
+      <publishTime>05/13/2022 15:44:15</publishTime>
+    </File>
+    <File Include="DiplomStore.BLL.pdb">
+      <publishTime>05/13/2022 15:44:15</publishTime>
+    </File>
+    <File Include="DiplomStore.DAL.dll">
+      <publishTime>05/14/2022 14:46:17</publishTime>
+    </File>
+    <File Include="DiplomStore.DAL.pdb">
+      <publishTime>05/14/2022 14:46:17</publishTime>
+    </File>
+    <File Include="DiplomStore.deps.json">
+      <publishTime>05/14/2022 14:46:26</publishTime>
+    </File>
+    <File Include="DiplomStore.dll">
+      <publishTime>05/14/2022 14:46:21</publishTime>
+    </File>
+    <File Include="DiplomStore.Domain.dll">
+      <publishTime>05/13/2022 15:44:13</publishTime>
+    </File>
+    <File Include="DiplomStore.Domain.pdb">
+      <publishTime>05/13/2022 15:44:13</publishTime>
+    </File>
+    <File Include="DiplomStore.exe">
+      <publishTime>05/14/2022 14:46:21</publishTime>
+    </File>
+    <File Include="DiplomStore.pdb">
+      <publishTime>05/14/2022 14:46:21</publishTime>
+    </File>
+    <File Include="DiplomStore.runtimeconfig.json">
+      <publishTime>05/13/2022 15:44:18</publishTime>
+    </File>
+    <File Include="Microsoft.Data.SqlClient.dll">
+      <publishTime>09/21/2021 06:59:32</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.Abstractions.dll">
+      <publishTime>04/18/2022 15:51:10</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.dll">
+      <publishTime>04/18/2022 15:51:36</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.Relational.dll">
+      <publishTime>04/18/2022 15:51:46</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.SqlServer.dll">
+      <publishTime>04/18/2022 15:51:56</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Caching.Memory.dll">
+      <publishTime>01/15/2022 02:54:16</publishTime>
+    </File>
+    <File Include="Microsoft.Identity.Client.dll">
+      <publishTime>10/20/2020 04:51:12</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.JsonWebTokens.dll">
+      <publishTime>10/13/2020 07:21:34</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Logging.dll">
+      <publishTime>10/13/2020 07:23:12</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Protocols.dll">
+      <publishTime>10/13/2020 07:25:30</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Protocols.OpenIdConnect.dll">
+      <publishTime>10/13/2020 07:31:32</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Tokens.dll">
+      <publishTime>10/13/2020 07:27:48</publishTime>
+    </File>
+    <File Include="Microsoft.Win32.SystemEvents.dll">
+      <publishTime>11/15/2019 15:36:56</publishTime>
+    </File>
+    <File Include="Newtonsoft.Json.dll">
+      <publishTime>03/18/2021 03:03:36</publishTime>
+    </File>
+    <File Include="runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll">
+      <publishTime>11/15/2019 15:56:36</publishTime>
+    </File>
+    <File Include="runtimes/unix/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll">
+      <publishTime>09/21/2021 06:59:34</publishTime>
+    </File>
+    <File Include="runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>10/21/2020 01:13:26</publishTime>
+    </File>
+    <File Include="runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>10/21/2020 01:13:26</publishTime>
+    </File>
+    <File Include="runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>10/21/2020 01:13:38</publishTime>
+    </File>
+    <File Include="runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>10/21/2020 01:13:26</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll">
+      <publishTime>11/15/2019 15:54:18</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll">
+      <publishTime>11/15/2019 15:54:20</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll">
+      <publishTime>11/15/2019 15:54:30</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll">
+      <publishTime>09/21/2021 06:59:34</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll">
+      <publishTime>11/15/2019 15:53:44</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>11/15/2019 15:53:46</publishTime>
+    </File>
+    <File Include="System.Configuration.ConfigurationManager.dll">
+      <publishTime>11/15/2019 15:37:04</publishTime>
+    </File>
+    <File Include="System.Drawing.Common.dll">
+      <publishTime>09/19/2018 02:38:14</publishTime>
+    </File>
+    <File Include="System.IdentityModel.Tokens.Jwt.dll">
+      <publishTime>10/13/2020 07:20:12</publishTime>
+    </File>
+    <File Include="System.Runtime.Caching.dll">
+      <publishTime>11/15/2019 15:37:36</publishTime>
+    </File>
+    <File Include="System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>11/15/2019 15:37:42</publishTime>
+    </File>
+    <File Include="System.Security.Permissions.dll">
+      <publishTime>11/15/2019 15:56:44</publishTime>
+    </File>
+    <File Include="System.Windows.Extensions.dll">
+      <publishTime>11/15/2019 15:56:52</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>05/14/2022 14:46:26</publishTime>
+    </File>
+    <File Include="wwwroot/c.css">
+      <publishTime>05/12/2022 10:10:46</publishTime>
+    </File>
+    <File Include="wwwroot/css/c.css">
+      <publishTime>05/12/2022 10:10:46</publishTime>
+    </File>
+    <File Include="wwwroot/css/nav.css">
+      <publishTime>03/16/2022 23:44:05</publishTime>
+    </File>
+    <File Include="wwwroot/css/nav.css.map">
+      <publishTime>03/16/2022 23:44:05</publishTime>
+    </File>
+    <File Include="wwwroot/css/style.css">
+      <publishTime>03/17/2022 09:58:46</publishTime>
+    </File>
+    <File Include="wwwroot/css/style.css.map">
+      <publishTime>03/17/2022 09:58:46</publishTime>
+    </File>
+    <File Include="wwwroot/img/logo/logo-1.jpg">
+      <publishTime>03/04/2022 17:05:56</publishTime>
+    </File>
+    <File Include="wwwroot/img/Tovars/img-Fig.jpg">
+      <publishTime>02/27/2022 22:35:23</publishTime>
+    </File>
+    <File Include="wwwroot/j.js">
+      <publishTime>05/12/2022 10:10:57</publishTime>
+    </File>
+    <File Include="wwwroot/js/j.js">
+      <publishTime>05/12/2022 10:10:57</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,12 @@
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.Domain\bin\Release\net6.0\DiplomStore.Domain.deps.json
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.Domain\bin\Release\net6.0\DiplomStore.Domain.dll
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.Domain\bin\Release\net6.0\ref\DiplomStore.Domain.dll
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.Domain\bin\Release\net6.0\DiplomStore.Domain.pdb
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.Domain\obj\Release\net6.0\DiplomStore.Domain.csproj.AssemblyReference.cache
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.Domain\obj\Release\net6.0\DiplomStore.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.Domain\obj\Release\net6.0\DiplomStore.Domain.AssemblyInfoInputs.cache
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.Domain\obj\Release\net6.0\DiplomStore.Domain.AssemblyInfo.cs
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.Domain\obj\Release\net6.0\DiplomStore.Domain.csproj.CoreCompileInputs.cache
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.Domain\obj\Release\net6.0\DiplomStore.Domain.dll
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.Domain\obj\Release\net6.0\ref\DiplomStore.Domain.dll
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.Domain\obj\Release\net6.0\DiplomStore.Domain.pdb

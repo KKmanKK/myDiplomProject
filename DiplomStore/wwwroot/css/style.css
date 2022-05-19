@@ -1,0 +1,70 @@
+.container-fluid {
+  height: 45px;
+}
+
+.d-flex {
+  height: 45px;
+}
+
+.navbar-nav {
+  height: 45px;
+}
+
+.navbarFl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: black;
+  text-decoration: none;
+}
+
+.navbar_cart {
+  background: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.carousel-item {
+  height: 350px;
+}
+
+.hero-img {
+  height: 135px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hero-link {
+  text-decoration: none;
+}
+
+.block {
+  height: 185px;
+}
+
+.tovars__tit {
+  height: 350px;
+}
+
+.tovars__img {
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.tovars__links {
+  text-decoration: none;
+}
+
+.footer__height {
+  height: 250px;
+  background-color: rgba(179, 179, 179, 0.2);
+}
+/*# sourceMappingURL=style.css.map */

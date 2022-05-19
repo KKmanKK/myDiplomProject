@@ -1,0 +1,136 @@
+﻿@model TovarAndCategoryListViewModel
+@{Layout="_Layout";}
+ <link href="/c.css" rel="stylesheet" />
+    <script src="/j.js"></script>
+<div class="navn  sticky-top ">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-lg "style="background-color: #1968AA">
+      <div class="container ">
+        <a asp-action="Index" asp-controller="Home" class="navbar-brand d-none d-lg-flex" >
+          <img src="/img/logo/logo-1.jpg" class="" alt="" />
+          Logo
+        </a>
+        <form class="d-flex w-75 " asp-action="TovarSearch" asp-controller="Tovar"  method="get">          
+          <input class="form-control me-2" name="searhString" type="search" placeholder="Поиск" aria-label="Search">          
+        </form>
+        <div class="container-fluid  w-25">        
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+         
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 w-100">
+              <li class="nav-item text-center rounded-1 w-100 bg-light " >
+                  @await Component.InvokeAsync("CartSummary")
+              </li>
+              <li class="rounded-1 bg-light w-100 d-lg-none d-xl-none d-xxl-none nav-item ">
+                <a class="nav-link" asp-action="TitleIndex" asp-controller="Home">Список тайтолов</a>
+              </li> 
+               <li class="rounded-1 bg-light w-100 d-lg-none d-xl-none d-xxl-none nav-item ">
+                <a class="nav-link" asp-action="CategoryIndex" asp-controller="Home">Список категорий</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="#">Профиль</a>
+              </li>           
+            </ul>            
+          </div>
+      </div>                                        
+    </nav>
+</div>
+
+<div class="main mt-3">
+        <div class="container">
+          <div class="main__Title mb-4">
+            @Model.Category.name / @Model.Tovar.Count() товаров
+          </div>
+          <!-- /.main__Title -->
+          <div class="row">
+            <div class="col-lg-3 d-none d-xxl-block d-xl-block d-lg-block">
+              <div class="main__search">
+                <form asp-action="TovarAndCategoryList" method="get" class="d-flex">
+                  <input class="form-control " name="searhString" type="search" placeholder="Поиск товара" aria-label="Search">          
+                   <input type="hidden" name="CategoriesId" value="@Model.Category.CategoriesId" />
+                        @foreach(var c in Model.Titles)
+                         {                             
+                             <input name="selectedTitle" value="@(Model.selectTitle.Contains(@c.TitlesId) ? @c.TitlesId : " ")" type="hidden"/><br/>
+                         }
+                        
+                </form>
+              </div>
+             
+              <!-- /.main__search -->
+              <div class="main__categor mt-3 border  p-3">
+                <div class="main__subTitle mb-3">Тайтл</div>
+                <!-- /.main__subTitle -->
+                
+                  <form asp-action="IndexTovarOfTitle" method="get">
+                      <input name="searchString" class="form-control " type="search" placeholder="Поиск" aria-label="Search">    
+                  </form>
+                      
+                    <form asp-action="IndexTovarOfTitle" asp-controller="Tovar" method="get" class="main__searhcCategor ">
+                    <div class="mt-2 main__filterItems">
+                                                    
+                     <div class="contain">
+                       
+                         @foreach(var c in Model.Titles)
+                         {                             
+                             <input name="selectedTitle" value="@c.TitlesId" type="checkbox"
+                             @(Model.selectTitle.Contains(@c.TitlesId) ? "checked" : " ")/>@c.name<br/>
+                         }                                                
+                    </div>
+                      
+                    </div>
+                    <input type="hidden" name="CategoriesId" value="@Model.Category.CategoriesId" />
+                    <!-- /.main__filterItems -->
+                    <div class="main__buttons d-grid gap-2 mt-3" >
+                      <button class="btn main__secbut shadow btn-primary" type="submit">Принять</button>
+
+                    <a asp-route-selectedTitle="0" asp-route-CategoriesId="@Model.Category.CategoriesId" asp-action="IndexTovarOfTitle" class="btn border main__secbut shadow">Сбросить</a>      
+                    </div>
+                    <!-- /.main__buttons -->
+                </form>
+                <!-- /.main__searhcCategor -->
+                
+              </div>
+              <!-- /.main__categor -->
+             
+            </div>
+            <div class="col-lg-9 row">
+                @if(Model.Tovar == null || Model.Tovar.Count <= 0)
+                {
+                    <p>Упс, ничего не найдено</p>
+                }
+                else
+                {
+                   @foreach(var c in Model.Tovar)
+                {
+                     <div class="col-lg-4 col-md-5 col-sm-5 col-5 mb-3">
+                 <div class="tovars__tit shadow-lg rounded-3 border border-1 text-center">
+                  <a asp-action="TovarIndex" asp-route-TovarId="@c.TovarsId" class="tovars__links link-dark">
+                    <img src="/src/img/img-Fig2.jpg" alt="" class="tovars__img rounded">
+                    <div class="tovars__span">@c.name</div>
+                  </a>                
+                    <!-- /.tovars__span -->
+                    <div class="tovars__info d-flex p-2 justify-content-between mt-3">
+                      <div class="tovars__price">@c.price.ToString("c")</div>
+                        <!-- /.towars__price -->
+                      <a asp-action="TovarIndex" asp-route-TovarId="@c.TovarsId"  class="tovars__links border border-1 rounded-3">
+                        <div class="tovars__cart"> content</div>                  
+                      </a>                               
+                     </div>              
+                    </div>                      
+                    </div>
+                } 
+                }
+                
+               
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+
+          .contain { border:2px solid #ccc;  height: 100px; overflow-y: scroll;
+      </style>
+
+      

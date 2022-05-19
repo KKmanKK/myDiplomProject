@@ -1,0 +1,17 @@
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.BLL\bin\Release\net6.0\DiplomStore.BLL.deps.json
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.BLL\bin\Release\net6.0\DiplomStore.BLL.dll
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.BLL\bin\Release\net6.0\ref\DiplomStore.BLL.dll
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.BLL\bin\Release\net6.0\DiplomStore.BLL.pdb
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.BLL\bin\Release\net6.0\DiplomStore.DAL.dll
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.BLL\bin\Release\net6.0\DiplomStore.Domain.dll
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.BLL\bin\Release\net6.0\DiplomStore.DAL.pdb
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.BLL\bin\Release\net6.0\DiplomStore.Domain.pdb
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.BLL\obj\Release\net6.0\DiplomStore.BLL.csproj.AssemblyReference.cache
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.BLL\obj\Release\net6.0\DiplomStore.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.BLL\obj\Release\net6.0\DiplomStore.BLL.AssemblyInfoInputs.cache
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.BLL\obj\Release\net6.0\DiplomStore.BLL.AssemblyInfo.cs
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.BLL\obj\Release\net6.0\DiplomStore.BLL.csproj.CoreCompileInputs.cache
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.BLL\obj\Release\net6.0\DiplomStore.BLL.csproj.CopyComplete
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.BLL\obj\Release\net6.0\DiplomStore.BLL.dll
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.BLL\obj\Release\net6.0\ref\DiplomStore.BLL.dll
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.BLL\obj\Release\net6.0\DiplomStore.BLL.pdb

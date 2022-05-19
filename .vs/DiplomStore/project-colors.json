@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "20649b97-7068-463c-a4b4-d3eeee6d22fc": {
+      "ProjectGuid": "20649b97-7068-463c-a4b4-d3eeee6d22fc",
+      "DisplayName": "DiplomStore",
+      "ColorIndex": 0
+    },
+    "c0d1f2ae-b09c-4c24-81cf-cafee507ac24": {
+      "ProjectGuid": "c0d1f2ae-b09c-4c24-81cf-cafee507ac24",
+      "DisplayName": "DiplomStore.Domain",
+      "ColorIndex": 1
+    },
+    "a2cf92ab-3149-45b4-8436-f7218fbb93ae": {
+      "ProjectGuid": "a2cf92ab-3149-45b4-8436-f7218fbb93ae",
+      "DisplayName": "DiplomStore.DAL",
+      "ColorIndex": 2
+    },
+    "8e8c3beb-9ddf-4974-8562-66a6ef8fc74a": {
+      "ProjectGuid": "8e8c3beb-9ddf-4974-8562-66a6ef8fc74a",
+      "DisplayName": "DiplomStore.BLL",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Прочие файлы",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 4
+}

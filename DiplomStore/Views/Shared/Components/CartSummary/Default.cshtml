@@ -1,0 +1,7 @@
+﻿@model CartDTO
+
+<a class="nav-link" aria-current="page" asp-controller="Cart" asp-action="Index" 
+        asp-route-returnurl="@ViewContext.HttpContext.Request.PathAndQuery()">
+    <span class="">Корзина</span>
+    <span class="badge bg-primary text-wrap">@Model.Lines.Sum(x=>x.Quantity)</span>
+</a>

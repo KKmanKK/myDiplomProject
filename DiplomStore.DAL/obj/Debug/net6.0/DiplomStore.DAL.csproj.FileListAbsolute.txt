@@ -1,0 +1,17 @@
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.DAL\bin\Debug\net6.0\DiplomStore.DAL.deps.json
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.DAL\bin\Debug\net6.0\DiplomStore.DAL.runtimeconfig.json
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.DAL\bin\Debug\net6.0\DiplomStore.DAL.dll
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.DAL\bin\Debug\net6.0\ref\DiplomStore.DAL.dll
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.DAL\bin\Debug\net6.0\DiplomStore.DAL.pdb
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.DAL\bin\Debug\net6.0\DiplomStore.Domain.dll
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.DAL\bin\Debug\net6.0\DiplomStore.Domain.pdb
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.DAL\obj\Debug\net6.0\DiplomStore.DAL.csproj.AssemblyReference.cache
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.DAL\obj\Debug\net6.0\DiplomStore.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.DAL\obj\Debug\net6.0\DiplomStore.DAL.AssemblyInfoInputs.cache
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.DAL\obj\Debug\net6.0\DiplomStore.DAL.AssemblyInfo.cs
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.DAL\obj\Debug\net6.0\DiplomStore.DAL.csproj.CoreCompileInputs.cache
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.DAL\obj\Debug\net6.0\DiplomStore.DAL.csproj.CopyComplete
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.DAL\obj\Debug\net6.0\DiplomStore.DAL.dll
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.DAL\obj\Debug\net6.0\ref\DiplomStore.DAL.dll
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.DAL\obj\Debug\net6.0\DiplomStore.DAL.pdb
+C:\Users\gegbi\source\repos\DiplomStore\DiplomStore.DAL\obj\Debug\net6.0\DiplomStore.DAL.genruntimeconfig.cache

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "DiplomStore.Domain/1.0.0": {
+        "runtime": {
+          "DiplomStore.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DiplomStore.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
