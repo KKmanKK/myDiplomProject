@@ -1,13 +1,12 @@
 ﻿@model TovarAndTitleViewModel
 @{Layout="_Layout";}
- <link href="/c.css" rel="stylesheet" />
-    <script src="/j.js"></script>
+
 <div class="navn  sticky-top ">
     <nav class="navbar navbar-expand-lg navbar-light shadow-lg "style="background-color: #1968AA">
       <div class="container ">
         <a asp-action="Index" asp-controller="Home" class="navbar-brand d-none d-lg-flex" >
-          <img src="/img/logo/logo-1.jpg" class="" alt="" />
-          Logo
+          <img src="~/img/logo/logo-1.jpg" class="" alt="Logo" />
+       
         </a>
         <form class="d-flex w-75 " asp-action="TovarSearch" asp-controller="Tovar"  method="get">          
           <input class="form-control me-2" name="searhString" type="search" placeholder="Поиск" aria-label="Search">          
@@ -28,9 +27,12 @@
                <li class="rounded-1 bg-light w-100 d-lg-none d-xl-none d-xxl-none nav-item ">
                 <a class="nav-link" asp-action="CategoryIndex" asp-controller="Home">Список категорий</a>
               </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="#">Профиль</a>
-              </li>           
+              <li class="nav-item ms-3">
+                <a class="nav-link text-light  d-none d-xxl-block d-xl-block d-lg-block" asp-action="Index" asp-controller="User"><i class="fa-solid fa-circle-user fa-2x"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link bg-light d-lg-none d-xl-none d-xxl-none" asp-action="Index" asp-controller="User">Профиль</a>
+              </li>  
             </ul>            
           </div>
       </div>                                        
@@ -65,31 +67,28 @@
                      <div class="col-lg-4 col-md-5 col-sm-5 col-5 mb-3">
                  <div class="tovars__tit shadow-lg rounded-3 border border-1 text-center">
                   <a asp-action="TovarIndex" asp-route-TovarId="@c.TovarsId" class="tovars__links link-dark">
-                    <img src="/src/img/img-Fig2.jpg" alt="" class="tovars__img rounded">
+                    <img src="/img/Tovars/@{@c.NameImg}.jpg" alt="" class="tovars__img rounded">
                     <div class="tovars__span">@c.name</div>
                   </a>                
                     <!-- /.tovars__span -->
                     <div class="tovars__info d-flex p-2 justify-content-between mt-3">
-                      <div class="tovars__price">@c.price.ToString("c")</div>
+                      <div class="tovars__price">@c.price.ToString() ₽</div>
                         <!-- /.towars__price -->
                       <a asp-action="TovarIndex" asp-route-TovarId="@c.TovarsId"  class="tovars__links border border-1 rounded-3">
-                        <div class="tovars__cart"> content</div>                  
+                        <div class="tovars__cart"> <i class="fa-solid fa-cart-shopping"></i></div>                  
                       </a>                               
                      </div>              
                     </div>                      
                     </div>
                 } 
                 }
-                
+                <page-link page-model="@Model.IndexViewModel.PageViewModel" page-action="Index"></page-link>
                
               
             </div>
           </div>
         </div>
       </div>
-      <style>
-
-          .contain { border:2px solid #ccc;  height: 100px; overflow-y: scroll;
-      </style>
+   
 
       

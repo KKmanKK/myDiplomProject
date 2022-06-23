@@ -27,14 +27,9 @@
   <div class="mb-3">
     <label asp-for="category" class="form-label"></label>
     <select class="form-control" asp-for="nameCategory" asp-items="ViewBag.Categories">
-        <option disabled selected value="">Выберите Тайтл</option>
+        <option disabled selected value="">Выберите Категорию</option>
     </select>
-  </div>
-
-  <div class="mb-3 form-check">
-    <input  asp-for="isValids" class="form-check-input">
-    <label class="form-check-label" asp-for="isValids">В наличие?</label>
-  </div>
+  </div>  
 
    <div class="mb-3">
     <label asp-for="hight" class="form-label"></label>
@@ -52,8 +47,8 @@
   </div> 
   
    <div class="mb-3">
-    <label asp-for="imgPath" class="form-label"></label>
-    <input asp-for="imgPath" class="form-control">    
+    <label asp-for="NameImg" class="form-label"></label>
+    <input asp-for="NameImg" class="form-control">    
   </div> 
 
    <div class="mb-3">
@@ -64,7 +59,12 @@
    <div class="mb-3">
     <label asp-for="filler" class="form-label"></label>
     <input asp-for="filler" class="form-control">    
-  </div> 
+  </div>   
+
+  <div class="mb-3 form-check">
+    <input  asp-for="isValids" class="form-check-input">
+    <label class="form-check-label" asp-for="isValids">В наличии?</label>
+  </div>
   
   <button type="submit" class="btn btn-primary">Изменить</button>
   <a class="btn btn-secondary" asp-action="IndexTovars">Назад</a>

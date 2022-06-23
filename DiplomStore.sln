@@ -3,19 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiplomStore", "DiplomStore\DiplomStore.csproj", "{20649B97-7068-463C-A4B4-D3EEEE6D22FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiplomStore", "DiplomStore\DiplomStore.csproj", "{20649B97-7068-463C-A4B4-D3EEEE6D22FC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{CF7CD1A5-9EF5-49A8-BE68-1463AC51B6BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiplomStore.Domain", "DiplomStore.Domain\DiplomStore.Domain.csproj", "{C0D1F2AE-B09C-4C24-81CF-CAFEE507AC24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiplomStore.Domain", "DiplomStore.Domain\DiplomStore.Domain.csproj", "{C0D1F2AE-B09C-4C24-81CF-CAFEE507AC24}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{3225CC1A-3965-43E2-8104-3ADEAE7EB4BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiplomStore.DAL", "DiplomStore.DAL\DiplomStore.DAL.csproj", "{A2CF92AB-3149-45B4-8436-F7218FBB93AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiplomStore.DAL", "DiplomStore.DAL\DiplomStore.DAL.csproj", "{A2CF92AB-3149-45B4-8436-F7218FBB93AE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BLL", "BLL", "{A2D72E42-6D77-43AA-A032-BC53045CE4FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiplomStore.BLL", "DiplomStore.BLL\DiplomStore.BLL.csproj", "{8E8C3BEB-9DDF-4974-8562-66A6EF8FC74A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiplomStore.BLL", "DiplomStore.BLL\DiplomStore.BLL.csproj", "{8E8C3BEB-9DDF-4974-8562-66A6EF8FC74A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{25CF0B55-BA25-4927-81AD-AC6BDBC58177}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiplomStore.Tests", "DiplomStore.Tests\DiplomStore.Tests.csproj", "{12AE97BF-1CA5-4068-B2E2-0CDB2BC3E32B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,10 @@ Global
 		{8E8C3BEB-9DDF-4974-8562-66A6EF8FC74A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E8C3BEB-9DDF-4974-8562-66A6EF8FC74A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E8C3BEB-9DDF-4974-8562-66A6EF8FC74A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12AE97BF-1CA5-4068-B2E2-0CDB2BC3E32B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12AE97BF-1CA5-4068-B2E2-0CDB2BC3E32B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12AE97BF-1CA5-4068-B2E2-0CDB2BC3E32B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12AE97BF-1CA5-4068-B2E2-0CDB2BC3E32B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -47,6 +55,7 @@ Global
 		{C0D1F2AE-B09C-4C24-81CF-CAFEE507AC24} = {CF7CD1A5-9EF5-49A8-BE68-1463AC51B6BA}
 		{A2CF92AB-3149-45B4-8436-F7218FBB93AE} = {3225CC1A-3965-43E2-8104-3ADEAE7EB4BF}
 		{8E8C3BEB-9DDF-4974-8562-66A6EF8FC74A} = {A2D72E42-6D77-43AA-A032-BC53045CE4FF}
+		{12AE97BF-1CA5-4068-B2E2-0CDB2BC3E32B} = {25CF0B55-BA25-4927-81AD-AC6BDBC58177}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6462BC0F-7BF1-4271-A0E4-4F78052515BC}

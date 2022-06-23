@@ -1,11 +1,11 @@
-﻿using DiplomStore.BLL.DTO;
+﻿using DiplomStore.Domain.Entity;
 
 namespace DiplomStore.BLL.Services.Intefaces
 {
-    public interface ICategoryService:IBaseService<CategoryDTO>
+    public interface ICategoryService:IBaseService<Categories>
     {
-        CategoryDTO Create(CategoryDTO model);
-
-        CategoryDTO Edit(CategoryDTO model);
+        Categories Create(Categories model);
+        void DeleteTovar(int idCategory, Tovars tovar);
+        Categories Edit(Categories model);
     }
 }

@@ -5,8 +5,8 @@
     <nav class="navbar navbar-expand-lg navbar-light shadow-lg "style="background-color: #1968AA">
       <div class="container ">
         <a asp-action="Index" asp-controller="Home" class="navbar-brand d-none d-lg-flex" >
-          <img src="/img/logo/logo-1.jpg" class="" alt="" />
-          Logo
+          <img src="~/img/logo/logo-1.jpg" class="" alt="Logo" />
+       
         </a>
         <form class="d-flex w-75 " asp-action="TovarSearch" asp-controller="Tovar"  method="get">          
           <input class="form-control me-2" name="searhString" type="search" placeholder="Поиск" aria-label="Search">          
@@ -27,9 +27,12 @@
                <li class="rounded-1 bg-light w-100 d-lg-none d-xl-none d-xxl-none nav-item ">
                 <a class="nav-link" asp-action="CategoryIndex" asp-controller="Home">Список категорий</a>
               </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="#">Профиль</a>
-              </li>           
+              <li class="nav-item ms-3">
+                <a class="nav-link text-light  d-none d-xxl-block d-xl-block d-lg-block" asp-action="Index" asp-controller="User"><i class="fa-solid fa-circle-user fa-2x"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link bg-light d-lg-none d-xl-none d-xxl-none" asp-action="Index" asp-controller="User">Профиль</a>
+              </li>  
             </ul>            
           </div>
       </div>                                        
@@ -47,7 +50,7 @@
             {
                <div class="mainCart__product row m-1 ">
                       <div class="col-md-3">
-                          <img class="mainCart__img  rounded shadow" src="img/img-fig2.jpg" alt="">
+                          <img class="mainCart__img  rounded shadow" src="/img/Tovars/@{@c.tovar.NameImg}.jpg" alt="">
                       </div>
                       <div class="col-md-3">
                           <span class="fs-5">@c.tovar.name</span>
@@ -93,10 +96,16 @@
       <div class="btnCart mt-3">
           <div class="container">
               <div class="block row h-25 justify-content-end">
-                    <span class="col-2 " >Итог: @Model.Cart.ComputeTotalVaule().ToString("c")</span>
-                    <a asp-action="" asp-controller="" class="col-lg-2 btn btn-primary" >Оформить заказ</a>
+                    <span class="col-2 " >Итог: @Model.Cart.ComputeTotalVaule().ToString() ₽</span>
+                    <a asp-action="Checkout" asp-controller="Order" class="col-lg-2 btn btn-primary" >Оформить заказ</a>
               </div>
           </div>
           <!-- /.container -->
       </div>
       <!-- /.btnCart -->
+      <style>
+          .mainCart__img {
+    height: 215px;
+    max-width: 196px;
+}
+      </style>

@@ -3,19 +3,20 @@ using DiplomStore.BLL.Services.Intefaces;
 using DiplomStore.ViewsModels.Cart;
 using Microsoft.AspNetCore.Mvc;
 using DiplomStore.BLL.DTO.Cart;
+using DiplomStore.Domain.Entity;
 
 namespace DiplomStore.Controllers
 {
     public class CartController:Controller
     {
-        private readonly ITovarService Tovars;
+        private readonly ITovarService tovars;
         private readonly ITitleService Titles;
         private readonly ICategoryService Category;
         private readonly CartDTO cart;
 
         public CartController(ITovarService tv, ITitleService tit, ICategoryService cat, CartDTO car)
         {
-            Tovars = tv;
+            tovars = tv;
             Titles = tit;
             Category = cat;
             cart = car;
@@ -31,7 +32,7 @@ namespace DiplomStore.Controllers
         }
         public IActionResult AddToCart(int TovarsId, string returnUrl)
         {
-            TovarDTO tovar = Tovars.GetTovar().FirstOrDefault(t=>t.TovarsId == TovarsId);
+            Tovars tovar = tovars.GetTovar().FirstOrDefault(t=>t.TovarsId == TovarsId);
             if(tovar !=null)
             {
                 cart.AddItem(tovar, 1);
@@ -41,7 +42,7 @@ namespace DiplomStore.Controllers
 
         public IActionResult RemoveFromCart(int TovarsId, string returnUrl)
         {
-            TovarDTO tovar = Tovars.Models().FirstOrDefault(t => t.TovarsId == TovarsId);
+            Tovars tovar = tovars.Models().FirstOrDefault(t => t.TovarsId == TovarsId);
             if (tovar != null)
             {
                 cart.RemoveLine(tovar);
@@ -50,10 +51,10 @@ namespace DiplomStore.Controllers
         }
         public IActionResult RemoveItemFromCart(int TovarsId, string returnUrl)
         {
-            TovarDTO tovar = Tovars.Models().FirstOrDefault(t => t.TovarsId == TovarsId);
+            Tovars tovar = tovars.Models().FirstOrDefault(t => t.TovarsId == TovarsId);
             if (tovar != null)
-            {
-                cart.RemoveItem(tovar,1);
+            {                
+                cart.RemoveItem(tovar);
             }
             return RedirectToAction("Index", new { returnUrl });
         }

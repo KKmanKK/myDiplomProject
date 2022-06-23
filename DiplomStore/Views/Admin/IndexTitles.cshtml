@@ -4,7 +4,8 @@
     <table class="table table-bordered">
     <thead>
         <tr>
-        <th scope="col">Назвакние</th>
+        <th scope="col">Название</th>
+        <th scope="col">Название изображения</th>
         <th scope="col">Популярный?</th>
         <th scope="col">Товары</th>       
         </tr>        
@@ -12,16 +13,17 @@
     <tbody>
         @if(Model.Count()==0 )
         {
-            <tr><td colspan="3" class="text-center">Нету данных</td></tr>
+            <tr><td colspan="4" class="text-center">Нету данных</td></tr>
         }
         else
         {
             @foreach(var c in Model)
             {
-                <tr>
+                <tr>          
                     <td>@c.name</td>
+                    <td>@c.NameImg</td>
                     <td>@c.isPopular</td>                  
-                    <td><a class="btn btn-primary" asp-action="ListProject" asp-route-id="@c.TitlesId">Товары</a></td>
+                    <td><a class="btn btn-primary" asp-action="ListTitleTovars" asp-route-id="@c.TitlesId">Товары</a></td>
                     <td>
                         <form method="post" asp-action="DeleteTitle" asp-route-id="@c.TitlesId">
                             <a asp-action="EditTitle" asp-route-id="@c.TitlesId" class="btn btn-sm btn-secondary">Изменить</a>

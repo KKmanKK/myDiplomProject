@@ -1,11 +1,12 @@
 ﻿@model TovarsTitleViewModel
+@{Layout="_Layout";}
 
 <div class="navn  sticky-top ">
     <nav class="navbar navbar-expand-lg navbar-light shadow-lg "style="background-color: #1968AA">
       <div class="container ">
         <a asp-action="Index" asp-controller="Home" class="navbar-brand d-none d-lg-flex" >
-          <img src="/img/logo/logo-1.jpg" class="" alt="" />
-          Logo
+          <img src="~/img/logo/logo-1.jpg" class="" alt="Logo" />
+       
         </a>
         <form class="d-flex w-75 " asp-action="TovarSearch" asp-controller="Tovar"  method="get">          
           <input class="form-control me-2" name="searhString" type="search" placeholder="Поиск" aria-label="Search">          
@@ -26,45 +27,33 @@
                <li class="rounded-1 bg-light w-100 d-lg-none d-xl-none d-xxl-none nav-item ">
                 <a class="nav-link" asp-action="CategoryIndex" asp-controller="Home">Список категорий</a>
               </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="#">Профиль</a>
-              </li>           
+              <li class="nav-item ms-3">
+                <a class="nav-link text-light  d-none d-xxl-block d-xl-block d-lg-block" asp-action="Index" asp-controller="User"><i class="fa-solid fa-circle-user fa-2x"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link bg-light d-lg-none d-xl-none d-xxl-none" asp-action="Index" asp-controller="User">Профиль</a>
+              </li>  
             </ul>            
           </div>
       </div>                                        
     </nav>
 </div>
 
-<div class="main mt-4">
+<div class="mainTovar mt-4">
            <div class="container border bg-light">
-               <h3 class="main__title">@Model.Tovar.name</h3>
+               <h3 class="mainTovar__title">@Model.Tovar.name</h3>
                <!-- /.main__title -->
-               <div class="main__tovarifo row">
+               <div class="mainTovar__tovarifo row">
 
-                <div class="main__tovar  p-3 col-lg-3 d-block">
-                    <div class="mb-3">
-                        <img src="img/img-fig2.jpg" alt="" class=" main__img shadow-lg rounded">                                         
-                    </div>
-                    <div class="row d-none d-lg-flex">
-                      <div class="bloc col-lg-4 mb-2">
-                        <img src="img/img-Fig2.jpg" alt="" class=" main__microImg col shadow-lg rounded">
-                      </div>
-                      <div class="bloc col-lg-4 mb-2">
-                        <img src="img/img-Fig2.jpg" alt="" class=" main__microImg col shadow-lg rounded">
-                      </div>
-                      <div class="bloc col-lg-4 mb-2">
-                        <img src="img/img-Fig2.jpg" alt="" class=" main__microImg col shadow-lg rounded">
-                      </div>
-                      <div class="bloc col-lg-4 mb-2">
-                        <img src="img/img-Fig2.jpg" alt="" class=" main__microImg col shadow-lg rounded">
-                      </div>
-                    </div>
-
+                <div class="mainTovar__tovar  p-3 col-lg-3 d-block">
+                    <div class="mb-3">                        
+                        <img src="/img/Tovars/@{@Model.Tovar.NameImg}.jpg" alt="" class="mainTovar__img shadow-lg rounded">                                         
+                    </div>                    
                 </div>
                 <!-- /.main__tovar -->
-                <div class="main__info col-lg-5 ms-lg-5 p-3">
-                  <div class="main__charactirictic">
-                    <h5 class="main__subTitle">
+                <div class="mainTovar__info col-lg-5 ms-lg-5 p-3">
+                  <div class="mainTovar__charactirictic">
+                    <h5 class="mainTovar__subTitle">
                       Характеристика товара
                     </h5>
                     <!-- /.main__subTitle -->
@@ -170,12 +159,12 @@
                 </div>                
                 <!-- /.main__info -->
                 <div class="col-lg-3 p-2">
-                  <div class="main__btns">
-                    <h5 class="main__price">@Model.Tovar.price.ToString("c")</h5>
+                  <div class="mainTovar__btns">
+                    <h5 class="mainTovar__price">@Model.Tovar.price.ToString() ₽</h5>
                     <form asp-action="AddToCart" asp-controller="Cart" method="post">
                         <input type="hidden" name="TovarsId" value="@Model.Tovar.TovarsId" />
                         <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
-                        <button type="submit" class="main__btn btn btn-primary d-grid">Купить</button>     
+                        <button type="submit" class="mainTovar__btn btn btn-primary d-grid">Купить</button>     
                     </form>
                                    
                   </div>                  
@@ -196,15 +185,15 @@
                 <div class="col-xl-3  col-6 mb-2 ">
                 <div class="tovars__tit shadow-lg rounded-3 border border-1 text-center">
                   <a asp-action="TovarIndex" asp-route-TovarId="@c.TovarsId" class="tovars__links link-dark">
-                    <img src="/img/img-Fig2.jpg" alt="" class="tovars__img rounded">
+                    <img src="/img/Tovars/@{@c.NameImg}.jpg" alt="" class="tovars__img rounded">
                     <div class="tovars__span">@c.name</div>
                   </a>                
                     <!-- /.tovars__span -->
                     <div class="tovars__info d-flex p-2 justify-content-between mt-3">
-                      <div class="tovars__price">@c.price.ToString("c")</div>
+                      <div class="tovars__price">@c.price.ToString() ₽</div>
                         <!-- /.towars__price -->
                       <a asp-action="TovarIndex" asp-route-TovarId="@c.TovarsId" class="tovars__links border border-1 rounded-3">
-                        <div class="tovars__cart"> content</div>                  
+                        <div class="tovars__cart"> <i class="fa-solid fa-cart-shopping"></i></div>                  
                       </a>                               
                      </div>              
                 </div>                      
@@ -217,3 +206,9 @@
           </div>
        </div>
        <!-- /.main__tovars -->
+       <style>
+           .mainTovar__img {
+    height: 380px;
+    max-width: 100%;
+}
+       </style>

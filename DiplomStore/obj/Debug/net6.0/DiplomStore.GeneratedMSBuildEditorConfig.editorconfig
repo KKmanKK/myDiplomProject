@@ -15,6 +15,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\gegbi\source\repos\DiplomStore\DiplomStore
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/gegbi/source/repos/DiplomStore/DiplomStore/Views/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gegbi/source/repos/DiplomStore/DiplomStore/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gegbi/source/repos/DiplomStore/DiplomStore/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/gegbi/source/repos/DiplomStore/DiplomStore/Views/Admin/Creates/CreateCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlc1xDcmVhdGVDYXRlZ29yeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -47,6 +59,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXhDYXRlZ29yaWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/gegbi/source/repos/DiplomStore/DiplomStore/Views/Admin/IndexOrders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXhPcmRlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/gegbi/source/repos/DiplomStore/DiplomStore/Views/Admin/IndexTitles.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXhUaXRsZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -55,8 +71,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXhUb3ZhcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gegbi/source/repos/DiplomStore/DiplomStore/Views/Admin/List.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlzdC5jc2h0bWw=
+[C:/Users/gegbi/source/repos/DiplomStore/DiplomStore/Views/Admin/IndexUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXhVc2Vycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gegbi/source/repos/DiplomStore/DiplomStore/Views/Admin/ListCategoryTovars.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlzdENhdGVnb3J5VG92YXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gegbi/source/repos/DiplomStore/DiplomStore/Views/Admin/ListTitleTovars.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlzdFRpdGxlVG92YXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/gegbi/source/repos/DiplomStore/DiplomStore/Views/Cart/Index.cshtml]
@@ -73,6 +97,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/gegbi/source/repos/DiplomStore/DiplomStore/Views/Home/TitleIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaXRsZUluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gegbi/source/repos/DiplomStore/DiplomStore/Views/Order/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ2hlY2tvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gegbi/source/repos/DiplomStore/DiplomStore/Views/Order/Completed.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ29tcGxldGVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gegbi/source/repos/DiplomStore/DiplomStore/Views/Order/Paid.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcUGFpZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/gegbi/source/repos/DiplomStore/DiplomStore/Views/Shared/Components/CartSummary/Default.cshtml]
@@ -97,6 +133,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/gegbi/source/repos/DiplomStore/DiplomStore/Views/Tovar/TovarSearch.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG92YXJcVG92YXJTZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gegbi/source/repos/DiplomStore/DiplomStore/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/gegbi/source/repos/DiplomStore/DiplomStore/Views/_ViewImports.cshtml]

@@ -35,7 +35,7 @@ namespace DiplomStore.DAL.Repository
             if (category != null)
             {
                 category.name = entity.name;
-                category.imgPath = entity.imgPath;
+                category.NameImg = entity.NameImg;
                 category.tovars = entity.tovars;
                 category.IsPopular = entity.IsPopular;
             }

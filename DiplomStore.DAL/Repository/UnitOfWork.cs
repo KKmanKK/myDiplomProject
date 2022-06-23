@@ -9,6 +9,7 @@ namespace DiplomStore.DAL.Repository
         public TovarsRepository tovar;
         public TitlesRepository title;
         public CategoriesRepository category;
+        public OrderRepository order;
         public UnitOfWork(AppDbContext ctx)
         {
             context = ctx;
@@ -46,6 +47,18 @@ namespace DiplomStore.DAL.Repository
                     category= new CategoriesRepository(context);
                 }
                 return category;
+            }
+        }
+
+        public IOrderRepository Orders
+        {
+            get
+            {
+                if(order == null)
+                {
+                    order = new OrderRepository(context);
+                }
+                return order;
             }
         }
 

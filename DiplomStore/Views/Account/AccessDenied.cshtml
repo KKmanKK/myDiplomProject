@@ -1,0 +1,41 @@
+﻿@{Layout="_Layout";}
+
+<div class="navn  sticky-top ">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-lg "style="background-color: #1968AA">
+      <div class="container ">
+        <a asp-action="Index" asp-controller="Home" class="navbar-brand d-none d-lg-flex" >
+          <img src="~/img/logo/logo-1.jpg" class="" alt="Logo" />
+       
+        </a>
+        <form class="d-flex w-75 " asp-action="TovarSearch" asp-controller="Tovar"  method="get">          
+          <input class="form-control me-2" name="searhString" type="search" placeholder="Поиск" aria-label="Search">          
+        </form>
+        <div class="container-fluid  w-25">        
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+         
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 w-100">
+              <li class="nav-item text-center rounded-1 w-100 bg-light " >
+                  @await Component.InvokeAsync("CartSummary")
+              </li>
+              <li class="rounded-1 bg-light w-100 d-lg-none d-xl-none d-xxl-none nav-item ">
+                <a class="nav-link" asp-action="TitleIndex" asp-controller="Home">Список тайтолов</a>
+              </li> 
+               <li class="rounded-1 bg-light w-100 d-lg-none d-xl-none d-xxl-none nav-item ">
+                <a class="nav-link" asp-action="CategoryIndex" asp-controller="Home">Список категорий</a>
+              </li>
+              <li class="nav-item ms-3">
+                <a class="nav-link text-light  d-none d-xxl-block d-xl-block d-lg-block" asp-action="Index" asp-controller="User"><i class="fa-solid fa-circle-user fa-2x"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link bg-light d-lg-none d-xl-none d-xxl-none" asp-action="Index" asp-controller="User">Профиль</a>
+              </li>  
+            </ul>            
+          </div>
+      </div>                                        
+    </nav>
+</div>
+<h1>Вход запрещен</h1>
+<a asp-action="Index" asp-controller="Home" class="btn btn-primary">На главную страницу</a>

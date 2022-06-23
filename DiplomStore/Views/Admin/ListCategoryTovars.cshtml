@@ -1,0 +1,48 @@
+﻿@model CategoryViewModel
+@{Layout="_Layout";}
+<div class="bg-primary m-1 р-1 text-white"><h4>Категории</h4></div>
+    <table class="table table-bordered">
+    <thead>
+        <tr>
+        
+        <th scope="col">Название</th>
+        <th scope="col">Цена</th>
+        <th scope="col">В наличие?</th>
+        <th scope="col">Название изображения</th>
+        <th scope="col">Выстота</th>
+        <th scope="col">Ширина</th>       
+        <th scope="col">Материал</th>
+        <th scope="col">Наполнение</th>     
+        </tr>        
+    </thead>
+    <tbody>
+        @if(Model.tovars.Count()==0 )
+        {
+            <tr><td colspan="9" class="text-center">Нету данных</td></tr>
+        }
+        else
+        {
+            @foreach(var c in Model.tovars)
+            {
+                <tr>
+                    
+                    <td>@c.name</td>
+                    <td>@c.price.ToString() ₽</td>
+                    <td>@c.isValids</td>
+                    <td>@c.NameImg</td>
+                    <td>@c.hight</td>
+                    <td>@c.width</td>                    
+                    <td>@c.materials</td>
+                    <td>@c.filler</td>                                  
+                    <td>
+                        <form method="post" asp-action="DeleteTovarsCategory" asp-route-idCategory="@Model.CategoriesId" asp-route-idTovars="@c.TovarsId">                           
+                            <button class="btn btn-sm btn-danger" type="submit">Удалить</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }                   
+    </tbody>
+</table>
+<a class="btn btn-primary" asp-action="CreateTovar">Создать</a>
+<a class="btn btn-secondary" asp-controller="Admin" asp-action="IndexCategories">Назад</a>

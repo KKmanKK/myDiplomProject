@@ -1,10 +1,11 @@
-﻿using DiplomStore.BLL.DTO;
+﻿using DiplomStore.Domain.Entity;
 
 namespace DiplomStore.BLL.Services.Intefaces
 {
-    public interface ITitleService:IBaseService<TitleDTO>
+    public interface ITitleService:IBaseService<Titles>
     {
-        TitleDTO Create(TitleDTO model);
-        TitleDTO Edit(TitleDTO model);
+        Titles Create(Titles model);
+        void DeleteTovar(int idTitle, Tovars tovar);
+        Titles Edit(Titles model);
     }
 }

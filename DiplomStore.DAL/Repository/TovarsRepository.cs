@@ -24,18 +24,17 @@ namespace DiplomStore.DAL.Repository
         }
 
         public void Delete(int Id)
-        {
-            var tovar = context.tovars.FirstOrDefault(t => t.TitleId == Id);
-
+        {            
             if(Id != 0)
             {
+                var tovar = context.tovars.FirstOrDefault(t => t.TovarsId == Id);
                 context.tovars.Remove(tovar);
             }
         }
 
         public Tovars Edit(Tovars entity)
         {
-            var tovar = context.tovars.FirstOrDefault(t => t.TovarsId == entity.TitleId);
+            var tovar = context.tovars.FirstOrDefault(t => t.TovarsId == entity.TovarsId);
             if(tovar != null)
             {
                 tovar.name = entity.name;
@@ -44,7 +43,7 @@ namespace DiplomStore.DAL.Repository
                 tovar.hight = entity.hight;
                 tovar.width = entity.width;
                 tovar.count = entity.count;
-                tovar.imgPath = entity.imgPath;
+                tovar.NameImg = entity.NameImg;
                 tovar.materials = entity.materials;
                 tovar.filler = entity.filler;
             }

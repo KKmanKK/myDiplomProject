@@ -34,6 +34,7 @@ namespace DiplomStore.DAL.Repository
             var titles = context.titles.FirstOrDefault(c => c.TitlesId == entity.TitlesId);
             if (titles != null)
             {
+                titles.NameImg = entity.NameImg;
                 titles.name = entity.name;
                 titles.isPopular= entity.isPopular;
                 titles.tovars = entity.tovars;

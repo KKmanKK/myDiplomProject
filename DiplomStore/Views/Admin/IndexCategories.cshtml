@@ -4,8 +4,8 @@
     <table class="table table-bordered">
     <thead>
         <tr>
-        <th scope="col">Назвакние</th>
-        <th scope="col">Путь к картинке</th>
+        <th scope="col">Название</th>
+        <th scope="col">Название изображения</th>    
         <th scope="col">Популярный?</th>
         <th scope="col">Товары</th>        
         </tr>        
@@ -19,12 +19,11 @@
         {
             @foreach(var c in Model)
             {
-                <tr>
-                    <td>@c.CategoriesId</td>
+                <tr>                    
                     <td>@c.name</td>
-                    <td>@c.imgPath</td>
+                    <td>@c.NameImg</td>
                     <td>@c.IsPopular</td>
-                    <td><a class="btn btn-primary" asp-action="ListProject" asp-route-id="@c.CategoriesId">Товары</a></td>
+                    <td><a class="btn btn-primary" asp-action="ListCategoryTovars" asp-route-id="@c.CategoriesId">Товары</a></td>
                     <td>
                         <form method="post" asp-action="DeleteCategory" asp-route-id="@c.CategoriesId">
                             <a asp-action="EditCategory" asp-route-id="@c.CategoriesId" class="btn btn-sm btn-secondary">Изменить</a>

@@ -16,7 +16,7 @@ namespace DiplomStore.Domain.Entity
         public int? width { get; set; }
         public int count { get; set; }
 
-        public string? imgPath { get; set; }
+        public string? NameImg { get; set; }
 
         public string? materials { get; set; }
 

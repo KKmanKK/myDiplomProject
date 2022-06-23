@@ -1,0 +1,437 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.Tests\\DiplomStore.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.BLL\\DiplomStore.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.BLL\\DiplomStore.BLL.csproj",
+        "projectName": "DiplomStore.BLL",
+        "projectPath": "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.BLL\\DiplomStore.BLL.csproj",
+        "packagesPath": "C:\\Users\\gegbi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\gegbi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.DAL\\DiplomStore.DAL.csproj": {
+                "projectPath": "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.DAL\\DiplomStore.DAL.csproj"
+              },
+              "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.Domain\\DiplomStore.Domain.csproj": {
+                "projectPath": "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.Domain\\DiplomStore.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.DAL\\DiplomStore.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.DAL\\DiplomStore.DAL.csproj",
+        "projectName": "DiplomStore.DAL",
+        "projectPath": "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.DAL\\DiplomStore.DAL.csproj",
+        "packagesPath": "C:\\Users\\gegbi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\gegbi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.Domain\\DiplomStore.Domain.csproj": {
+                "projectPath": "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.Domain\\DiplomStore.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.Domain\\DiplomStore.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.Domain\\DiplomStore.Domain.csproj",
+        "projectName": "DiplomStore.Domain",
+        "projectPath": "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.Domain\\DiplomStore.Domain.csproj",
+        "packagesPath": "C:\\Users\\gegbi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\gegbi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.Tests\\DiplomStore.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.Tests\\DiplomStore.Tests.csproj",
+        "projectName": "DiplomStore.Tests",
+        "projectPath": "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.Tests\\DiplomStore.Tests.csproj",
+        "packagesPath": "C:\\Users\\gegbi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\gegbi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.BLL\\DiplomStore.BLL.csproj": {
+                "projectPath": "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.BLL\\DiplomStore.BLL.csproj"
+              },
+              "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore\\DiplomStore.csproj": {
+                "projectPath": "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore\\DiplomStore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.11.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.1, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore\\DiplomStore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore\\DiplomStore.csproj",
+        "projectName": "DiplomStore",
+        "projectPath": "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore\\DiplomStore.csproj",
+        "packagesPath": "C:\\Users\\gegbi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\gegbi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.BLL\\DiplomStore.BLL.csproj": {
+                "projectPath": "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.BLL\\DiplomStore.BLL.csproj"
+              },
+              "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.DAL\\DiplomStore.DAL.csproj": {
+                "projectPath": "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.DAL\\DiplomStore.DAL.csproj"
+              },
+              "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.Domain\\DiplomStore.Domain.csproj": {
+                "projectPath": "C:\\Users\\gegbi\\source\\repos\\DiplomStore\\DiplomStore.Domain\\DiplomStore.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Font.Awesome": {
+              "target": "Package",
+              "version": "[5.15.4, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "XAct.Core.PCL": {
+              "target": "Package",
+              "version": "[0.0.5014, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

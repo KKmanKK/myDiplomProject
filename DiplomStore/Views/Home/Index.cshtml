@@ -1,12 +1,13 @@
 ﻿@model HomeViewModel
 @{Layout="_Layout";}
-
+   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>				
 <div class="navn  sticky-top ">
     <nav class="navbar navbar-expand-lg navbar-light shadow-lg "style="background-color: #1968AA">
       <div class="container ">
         <a asp-action="Index" asp-controller="Home" class="navbar-brand d-none d-lg-flex" >
-          <img src="/img/logo/logo-1.jpg" class="" alt="" />
-          Logo
+          <img src="~/img/logo/logo-1.jpg" class="" alt="Logo" />
+       
         </a>
         <form class="d-flex w-75 " asp-action="TovarSearch" asp-controller="Tovar"  method="get">          
           <input class="form-control me-2" name="searhString" type="search" placeholder="Поиск" aria-label="Search">          
@@ -22,14 +23,17 @@
                   @await Component.InvokeAsync("CartSummary")
               </li>
               <li class="rounded-1 bg-light w-100 d-lg-none d-xl-none d-xxl-none nav-item ">
-                <a class="nav-link" asp-action="TitleIndex" >Список тайтолов</a>
+                <a class="nav-link" asp-action="TitleIndex" asp-controller="Home">Список тайтолов</a>
               </li> 
                <li class="rounded-1 bg-light w-100 d-lg-none d-xl-none d-xxl-none nav-item ">
-                <a class="nav-link" asp-action="CategoryIndex" >Список категорий</a>
+                <a class="nav-link" asp-action="CategoryIndex" asp-controller="Home">Список категорий</a>
               </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="#">Профиль</a>
-              </li>           
+              <li class="nav-item ms-3">
+                <a class="nav-link text-light  d-none d-xxl-block d-xl-block d-lg-block" asp-action="Index" asp-controller="User"><i class="fa-solid fa-circle-user fa-2x"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link bg-light d-lg-none d-xl-none d-xxl-none" asp-action="Index" asp-controller="User">Профиль</a>
+              </li>  
             </ul>            
           </div>
       </div>                                        
@@ -55,7 +59,7 @@
             </div>
           </div>
           <div class="col-lg-10">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide d-none d-xxl-block d-xl-block d-lg-block " data-bs-ride="carousel">
               <div class="carousel-indicators">
                 <button type="button"  data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active rounded-circle" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -63,13 +67,13 @@
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="/img/3.jpg" class="d-block w-100" alt="...">
+                  <img src="/img/img-2.jpg" class="d-block w-100 " alt="...">
                 </div>
                 <div class="carousel-item">
-                  <img src="/img/3.jpg" class="d-block w-100" alt="...">
+                  <img src="/img/img-3.jpg" class="d-block w-100 " alt="...">
                 </div>
                 <div class="carousel-item">
-                  <img src="/img/4.jpg" class="d-block w-100" alt="...">
+                  <img src="/img/img-4.jpg" class="d-block w-100 " alt="...">
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
@@ -90,17 +94,25 @@
       <div class="container">
         <span class="">Популярные тайтлы</span>
         <div class="row mt-3 border pt-2">   
-            @foreach(var c in Model.titles)
+            @if (@Model.titles.Count() <= 0 || @Model.titles==null)
+            {
+                <p>Нету данных</p>
+            }
+            else
+            {
+             @foreach(var c in Model.titles)
             {
                <div class="col-lg-2 mb-2 ">
                 <div class="block shadow-lg rounded-3 border border-1 text-center ">
                   <a asp-action="TovarAndTitleList" asp-route-TitleId="@c.TitlesId" asp-controller="Tovar" class="hero-link link-dark">
-                    <img class="hero-img  rounded" src="" alt="">
+                    <img class="hero-img  rounded" src="/img/Titles/@{@c.NameImg}.jpg" alt="">
                   <span>@c.name</span>
                   </a>                  
                 </div>
                 </div> 
-            }                                                 
+            }   
+            }
+                                                             
         </div>      
         <div class="d-flex justify-content-md-end m-2">
           <a class="btn text-white"style="background-color: #1968AA" asp-action="TitleIndex">Все тайтлы</a>
@@ -110,35 +122,48 @@
     </div>
     <!-- /.main -->
 
-    <div class="tovars">
+    <div class="tovars  d-none d-xxl-block d-xl-block d-lg-block">
       <div class="container">
-        <div class="row mt-4 border pt-2">
-            <span class="fs-5 mb-3">Товары по популярным тайтлам</span>
+          <span class="fs-5 mb-3">Товары по популярным тайтлам</span>
+        <div class="slider row mt-4 border pt-2">
+            
             @foreach(var t in Model.tovars)
             {
-                 <div class="col-sm-3 ">
-            <div class="tovars__tit shadow-lg rounded-3 border border-1 text-center">
-              <a asp-controller="Tovar" asp-action="TovarIndex" asp-route-TovarId="@t.TovarsId" class="tovars__links link-dark">
-                <img src="/img/img-Fig2.jpg" alt="" class="tovars__img rounded">
-                <div class="tovars__span">@t.name</div>
-              </a>                
-                <!-- /.tovars__span -->
-                <div class="tovars__info d-flex p-2 justify-content-between mt-3">
-                  <div class="tovars__price">@t.price.ToString("c")</div>
-                    <!-- /.towars__price -->
-                  <a asp-controller="Tovar" asp-action="TovarIndex" asp-route-TovarId="@t.TovarsId" class="tovars__links border border-1 rounded-3">
-                    <div class="tovars__cart"> content</div>                  
-                  </a>                               
-                 </div>              
-            </div>                      
-          </div>
-            }
-         
-          
-         
-          
+                 <div class="slider-item col-sm-3  mx-2">
+                    <div class="tovars__tit shadow-lg rounded-3 border border-1 text-center">
+                      <a asp-controller="Tovar" asp-action="TovarIndex" asp-route-TovarId="@t.TovarsId" class="tovars__links link-dark">
+                        <img src="/img/Tovars/@{@t.NameImg}.jpg" alt="" class="tovars__img rounded">
+                        <div class="tovars__span">@t.name</div>
+                      </a>                
+                        <!-- /.tovars__span -->
+                        <div class="tovars__info d-flex p-2 justify-content-between mt-3">
+                          <div class="tovars__price">@t.price.ToString() ₽</div>
+                            <!-- /.towars__price -->
+                          <a asp-controller="Tovar" asp-action="TovarIndex" asp-route-TovarId="@t.TovarsId" class="tovars__links border border-1 rounded-3">
+                            <div class="tovars__cart" > <i class="fa-solid fa-cart-shopping"></i></div>                  
+                          </a>                               
+                         </div>              
+                    </div>                      
+                </div>
+            }         
         </div>
       </div>
       <!-- /.container -->
     </div>
     <!-- /.tovars -->
+    <script>
+     $(document).ready(function(){
+         $(".slider").slick({
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              autoplay: true,
+              autoplaySpeed: 2000,
+         })
+     })  
+        
+     </script>
+     <style>
+         .carousel-item {
+  height: 400px;
+}
+     </style>

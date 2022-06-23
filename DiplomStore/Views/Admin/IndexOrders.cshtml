@@ -1,0 +1,57 @@
+﻿@model IEnumerable<OrderViewModel>
+@{Layout="_Layout";}
+<div class="bg-primary m-1 р-1 text-white"><h4>Заказы</h4></div>
+    <table class="table table-bordered">
+    <thead>
+        <tr>
+        
+        <th scope="col">Имя пользователя</th>
+        <th scope="col">Дата и время заказа</th>
+        <th scope="col">Населенный пункт</th>
+        <th scope="col">Регион</th>
+        <th scope="col">Улица</th>
+        <th scope="col">Дом</th>       
+        <th scope="col">Название товара</th>                
+        <th scope="col">Количество заказанного товара</th>
+        </tr>        
+    </thead>
+    <tbody>
+        @if(Model.Count()==0 )
+        {
+            <tr><td colspan="9" class="text-center">Нету данных</td></tr>
+        }
+        else
+        {
+            @foreach (var c in Model)
+        {
+                <tr>                    
+                    <td>@c.User.UserName</td>
+                    <td>@c.DateTime</td>
+                    <td>@c.Locality</td>
+                    <td>@c.Region</td>
+                    <td>@c.Street</td>
+                    <td>@c.House</td>                    
+                    <td>
+                        @foreach(var p in c.Lines)
+                        {
+                            <p>@p.tovar.name</p> 
+                        }
+                    </td>
+                    <td>
+                        @foreach(var p in c.Lines)
+                        {
+                            <p>@p.Quantity</p>
+                        }
+                    </td>
+                    <td>
+                        <form method="post" asp-action="DeleteOrder" asp-route-id="@c.OrderID">                            
+                            <button class="btn btn-sm btn-danger" type="submit">Удалить</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }                   
+    </tbody>
+</table>
+<a class="btn btn-primary" asp-action="CreateTovar">Создать</a>
+<a class="btn btn-secondary" asp-controller="Admin" asp-action="Index">Назад</a>

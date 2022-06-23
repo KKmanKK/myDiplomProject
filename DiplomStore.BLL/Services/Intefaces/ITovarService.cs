@@ -1,11 +1,11 @@
-﻿using DiplomStore.BLL.DTO;
+﻿using DiplomStore.Domain.Entity;
 
 namespace DiplomStore.BLL.Services.Intefaces
 {
-    public interface ITovarService:IBaseService<TovarDTO>
+    public interface ITovarService:IBaseService<Tovars>
     {
-        TovarDTO Create(TovarDTO model);
-        TovarDTO Edit(TovarDTO model);
-        IEnumerable<TovarDTO> GetTovar();
+        Tovars Create(Tovars model);
+        Tovars Edit(Tovars model);
+        IEnumerable<Tovars> GetTovar();
     }
 }

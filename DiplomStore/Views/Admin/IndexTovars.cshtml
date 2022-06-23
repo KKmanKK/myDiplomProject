@@ -4,12 +4,13 @@
     <table class="table table-bordered">
     <thead>
         <tr>
-        <th scope="col">Назвакние</th>
+        
+        <th scope="col">Название</th>
         <th scope="col">Цена</th>
         <th scope="col">В наличие?</th>
+        <th scope="col">Название изображения</th>
         <th scope="col">Выстота</th>
-        <th scope="col">Ширина</th>
-        <th scope="col">Путь к картинке</th>
+        <th scope="col">Ширина</th>       
         <th scope="col">Материал</th>
         <th scope="col">Наполнение</th>
         <th scope="col">Тайтлы</th>
@@ -26,16 +27,17 @@
             @foreach(var c in Model)
             {
                 <tr>
+                    
                     <td>@c.name</td>
-                    <td>@c.price.ToString("c")</td>
+                    <td>@c.price.ToString() ₽</td>
                     <td>@c.isValids</td>
+                    <td>@c.NameImg</td>
                     <td>@c.hight</td>
-                    <td>@c.width</td>
-                    <td>@c.imgPath</td>
+                    <td>@c.width</td>                    
                     <td>@c.materials</td>
                     <td>@c.filler</td>
-                    <td><a class="btn btn-primary" asp-action="ListProject" asp-route-id="@c.TitleId">Тайтлы</a></td>
-                    <td><a class="btn btn-primary" asp-action="ListProject" asp-route-id="@c.CategoryId">Категории</a></td>
+                    <td>@c.titles.name</td>
+                    <td>@c.category.name</td>
                     <td>
                         <form method="post" asp-action="DeleteTovar" asp-route-id="@c.TovarsId">
                             <a asp-action="EditTovar" asp-route-id="@c.TovarsId" class="btn btn-sm btn-secondary">Изменить</a>

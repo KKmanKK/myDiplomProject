@@ -1,6 +1,4 @@
-﻿using AutoMapper;
-using DiplomStore.BLL.DTO;
-using DiplomStore.BLL.Services.Intefaces;
+﻿using DiplomStore.BLL.Services.Intefaces;
 using DiplomStore.DAL.Interface;
 using DiplomStore.Domain.Entity;
 using Microsoft.EntityFrameworkCore;
@@ -15,12 +13,9 @@ namespace DiplomStore.BLL.Services.Implementations
             db = context;
         }
 
-        public TitleDTO Create(TitleDTO model)
-        {
-            var map = new MapperConfiguration(c => c.CreateMap<TitleDTO, Titles>()).CreateMapper();
-            ///сопоставление объектов TitleDTO в Titles
-            var titles = map.Map<TitleDTO, Titles>(model);
-            db.Titles.Create(titles);
+        public Titles Create(Titles model)
+        {           
+            db.Titles.Create(model);
             db.Save();
             return model;
         }
@@ -31,32 +26,28 @@ namespace DiplomStore.BLL.Services.Implementations
             db.Save();
         }
 
-        public TitleDTO Edit(TitleDTO model)
+        public Titles Edit(Titles model)
         {
-            var map = new MapperConfiguration(c => c.CreateMap<TitleDTO, Titles>()).CreateMapper();
-            ///сопоставление объектов TitleDTO в Titles
-            var titles = map.Map<TitleDTO, Titles>(model);
-            db.Titles.Edit(titles);
+            db.Titles.Edit(model);
             db.Save();
             return model;
         }
 
-        public TitleDTO GetById(int id)
+        public Titles GetById(int id)
         {
             var title = db.Titles.GetAll.Include(e => e.tovars).FirstOrDefault(p => p.TitlesId == id);
-
-            ///конфигурацию маппера, для сопоставления типов данных
-            var mapper = new MapperConfiguration(c => c.CreateMap<Titles, TitleDTO>()).CreateMapper();
-            ///сопоставление объектов Titles в TitleDTO
-            var empl = mapper.Map<Titles, TitleDTO>(title);
-
-            return empl;
+            return title;
         }
 
-        public IEnumerable<TitleDTO> Models()
+        public IEnumerable<Titles> Models()
+        {            
+            return db.Titles.GetAll;
+        }
+        public void DeleteTovar(int idTitle, Tovars tovar)
         {
-            var map = new MapperConfiguration(c => c.CreateMap<Titles, TitleDTO>()).CreateMapper();
-            return map.Map<IQueryable<Titles>, List<TitleDTO>>(db.Titles.GetAll);
+            var title = db.Titles.GetAll.FirstOrDefault(c => c.TitlesId == idTitle);
+            tovar.category.tovars.RemoveAll(p => p.TitleId == idTitle);
+            db.Save();
         }
     }
 }

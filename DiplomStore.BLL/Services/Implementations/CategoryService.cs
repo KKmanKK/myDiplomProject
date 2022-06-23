@@ -1,6 +1,4 @@
-﻿using AutoMapper;
-using DiplomStore.BLL.DTO;
-using DiplomStore.BLL.Services.Intefaces;
+﻿using DiplomStore.BLL.Services.Intefaces;
 using DiplomStore.DAL.Interface;
 using DiplomStore.Domain.Entity;
 using Microsoft.EntityFrameworkCore;
@@ -15,12 +13,9 @@ namespace DiplomStore.BLL.Services.Implementations
             db = context;
         }
 
-        public CategoryDTO Create(CategoryDTO model)
-        {
-            var map = new MapperConfiguration(c => c.CreateMap<CategoryDTO, Categories>()).CreateMapper();
-            ///сопоставление объектов TitleDTO в Titles
-            var categories = map.Map<CategoryDTO, Categories>(model);
-            db.Categories.Create(categories);
+        public Categories Create(Categories model)
+        {            
+            db.Categories.Create(model);
             db.Save();
             return model;
         }
@@ -31,32 +26,29 @@ namespace DiplomStore.BLL.Services.Implementations
             db.Save();
         }
 
-        public CategoryDTO Edit(CategoryDTO model)
+        public Categories Edit(Categories model)
         {
-            var map = new MapperConfiguration(c => c.CreateMap<CategoryDTO, Categories>()).CreateMapper();
-            ///сопоставление объектов TitleDTO в Titles
-            var categories = map.Map<CategoryDTO, Categories>(model);
-            db.Categories.Edit(categories);
+      
+            db.Categories.Edit(model);
             db.Save();
             return model;
         }
 
-        public CategoryDTO GetById(int id)
+        public Categories GetById(int id)
         {
-            var category = db.Categories.GetAll.Include(e => e.tovars).FirstOrDefault(p => p.CategoriesId == id);
-
-            ///конфигурацию маппера, для сопоставления типов данных
-            var mapper = new MapperConfiguration(c => c.CreateMap<Categories, CategoryDTO>()).CreateMapper();
-            ///сопоставление объектов Categories в CategoryDTO
-            var empl = mapper.Map<Categories, CategoryDTO>(category);
-
-            return empl;
+            var category = db.Categories.GetAll.Include(e => e.tovars).FirstOrDefault(p => p.CategoriesId == id);                        
+            return category;
         }
 
-        public IEnumerable<CategoryDTO> Models()
-        {
-            var map = new MapperConfiguration(c => c.CreateMap<Categories, CategoryDTO>()).CreateMapper();
-            return map.Map<IQueryable<Categories>, List<CategoryDTO>>(db.Categories.GetAll);
+        public IEnumerable<Categories> Models()
+        {           
+            return db.Categories.GetAll;
+        }
+        public void DeleteTovar(int idCategory, Tovars tovar)
+        {            
+            var category = db.Categories.GetAll.FirstOrDefault(c=>c.CategoriesId == idCategory);            
+            tovar.category.tovars.RemoveAll(p=>p.CategoryId == idCategory);
+            db.Save();
         }
     }
 }
